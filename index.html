@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Script of font awesome for some icons -->
+    <script
+      src="https://kit.fontawesome.com/fbbe5497d7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="./images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQueries.css" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div class="header">
+      <h2>To-Do List</h2>
+    </div>
+    <div class="container">
+      <div class="todo-grid">
+        <div class="grid-container input-container">
+          <input type="text" placeholder="Enter your task" />
+        </div>
+        <div class="grid-container compeleted-list list-container">
+          <div>
+            <h3>Completed Task</h3>
+          </div>
+          <div class="ul-container comp">
+            <ul id="comp-list"><p id="msg">No tasks to show</p></ul>
+          </div>
+        </div>
+        <div class="grid-container todo-list list-container">
+          <div>
+            <h3>To-Do</h3>
+          </div>
+          <div class="ul-container">
+            <ul id="todo-list"><p id="msg">No tasks to show</p></ul>
+          </div>
+        </div>
+        <div class="grid-container reminder-list list-container">
+          <div>
+            <h3>Reminder Task</h3>
+          </div>
+          <div class="ul-container">
+            <ul id="rem-list"><p id="msg">No tasks to remind</p></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <h4>Made with &#10084;</h4>
+      <p>© Copyright by Rohan</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
