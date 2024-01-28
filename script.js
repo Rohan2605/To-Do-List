@@ -161,6 +161,7 @@ function setReminder(parentDiv) {
     setTimeout(() => {
       // Show a notification for the reminder
       showNotification(`Time to do your task: "${msg}"`);
+      alert(`Task Reminder: ${msg} `);
 
       // Move the task back to the todo list and remove the cloned div
       list.append(parentDiv);
