@@ -1,6 +1,7 @@
-/* Google fonts : POPPINS */
+/* Google fonts: Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
+/* Global Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Body Styles */
 body {
   height: 100vh;
   width: 100vw;
@@ -24,7 +26,7 @@ body {
   font-size: small;
 }
 
-/* Container Section (which contains grid section for proper alignment) */
+/* Main Container Styles */
 .container {
   height: 100%;
   width: 100%;
@@ -33,7 +35,7 @@ body {
   align-items: center;
 }
 
-/* Grid Section (it creates the grid layout of the webpage) */
+/* Grid Layout Section */
 .todo-grid {
   height: 80%;
   width: 85%;
@@ -44,7 +46,7 @@ body {
   grid-template-rows: repeat(5, 1fr);
 }
 
-/* Grid Container (Which contains a common styling for all elements) */
+/* Grid Container Styles */
 .grid-container {
   border-radius: 1rem;
   border: 2px solid rgb(201, 201, 201);
@@ -52,15 +54,17 @@ body {
   overflow: auto;
 }
 
-/* Animations when you hover over the grid containers */
+/* Hover Animation for Grid Containers */
 .grid-container:hover {
   box-shadow: 5px 5px 10px rgba(76, 75, 75, 0.4);
 }
+
+/* Message Styles */
 #msg {
   color: #999;
 }
 
-/* Input Continer (which containse styling for input) */
+/* Input Container Styles */
 .input-container {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -70,7 +74,7 @@ body {
   position: relative;
 }
 
-/* Input elements styling (present inside input container) */
+/* Input Element Styles */
 .input-container input {
   height: 4rem;
   width: 90%;
@@ -84,7 +88,7 @@ body {
   border: none;
 }
 
-/* List Container (which is a common class for styling 3 grid section for todo, completed and reminder tasks) */
+/* List Container Styles */
 .list-container {
   display: flex;
   flex-direction: column;
@@ -95,7 +99,7 @@ body {
   max-height: 100%;
 }
 
-/* Completed List Section (which contains all the completed tasks) */
+/* Completed List Section */
 .compeleted-list {
   grid-column-start: 3;
   grid-column-end: 5;
@@ -103,7 +107,7 @@ body {
   grid-row-end: 4;
 }
 
-/* To-Do List Section (which contains all the tasks to do) */
+/* To-Do List Section */
 .todo-list {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -111,7 +115,7 @@ body {
   grid-row-end: 6;
 }
 
-/* Reminder List Section (which contains all the tasks that are to be reminded) */
+/* Reminder List Section */
 .reminder-list {
   grid-column-start: 3;
   grid-column-end: 5;
@@ -119,7 +123,7 @@ body {
   grid-row-end: 6;
 }
 
-/* List div (a div block for each 'li' element and 'icons div' element for its better alignment and sizing) */
+/* List Item Styles */
 .list-div {
   display: flex;
   justify-content: space-between;
@@ -129,19 +133,19 @@ body {
   padding: 0.5rem; /* Adjust padding as needed */
 }
 
-/* Icon div (div for collecting all icons together for better alingment and sizing with 'li' element) */
+/* Icon Container Styles */
 .list-child-div {
   display: flex;
   gap: 1rem;
 }
 
-/* styling for Icon tag present inside child list div */
+/* Icon Styles */
 .list-child-div i {
   margin-left: auto;
   cursor: pointer;
 }
 
-/* Common styling of todo, completed and reminder unordered lists*/
+/* Common Styling for Lists */
 #todo-list,
 #comp-list,
 #rem-list {
@@ -149,10 +153,12 @@ body {
   max-width: 100%;
 }
 
-/* UL Container (div for common styling of all the unordered lists) */
+/* UL Container Styles */
 .ul-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  text-align: center;
+  height: 80%;
   width: 100%;
   justify-content: space-around;
   word-wrap: break-word;
@@ -162,7 +168,7 @@ body {
   overflow-x: auto;
 }
 
-/* Styling of 'li' element of unorderd list  */
+/* List Item Styles inside UL Container */
 .ul-container li {
   list-style: none;
   word-wrap: break-word;
@@ -171,7 +177,7 @@ body {
   position: relative;
 }
 
-/* Styling for adding a disc icon befor every list element  */
+/* List Marker Styles */
 .ul-container li:before {
   content: "\2022";
   font-size: large;
@@ -181,30 +187,46 @@ body {
   left: 0;
 }
 
-/* Styling for scrollbar */
+/* Scrollbar Styles */
 .ul-container::-webkit-scrollbar {
-  width: 8px; /* width of the vertical scrollbar */
-  height: 8px; /* height of the horizontal scrollbar */
+  width: 8px;
+  height: 8px;
   scroll-behavior: smooth;
 }
 
+/* Thumb Styles for Vertical Scrollbar */
 .ul-container::-webkit-scrollbar-thumb {
   background-color: #999;
   border-radius: 4px;
 }
 
+/* Track Styles for Vertical Scrollbar */
 .ul-container::-webkit-scrollbar-track {
   background-color: #eee;
   border-radius: 4px;
 }
 
-/* Additional styles for horizontal scrollbar thumb and track */
+/* Thumb and Track Styles for Horizontal Scrollbar */
 .ul-container::-webkit-scrollbar-thumb:horizontal {
   background-color: #999;
 }
 
 .ul-container::-webkit-scrollbar-track:horizontal {
   background-color: #ddd;
+}
+
+/* Styling for the pdf button and animation when we hover over it */
+#download-pdf{
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: 0.5px solid black;
+  padding: .4rem;
+  border-radius: 1rem;
+}
+
+#download-pdf:hover{
+  background-color: black;
+  color: white;
 }
 
 /* Footer Section ---------------------------------------- */
