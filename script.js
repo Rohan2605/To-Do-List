@@ -158,18 +158,34 @@ function setReminder(parentDiv) {
 
     // Set a timeout for the reminder
     setTimeout(() => {
-      // Show a notification for the reminder
-      showNotification(`Time to do your task: "${msg}"`);
-      // alert(`Task Reminder: ${msg} `);
 
-      // Move the task back to the todo list and remove the cloned div
-      list.append(parentDiv);
-      parentDiv.style.display = "flex";
-      parentDivCopy.remove();
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-      // Show or hide paragraph tag based on the content of the reminder list
-      let cont = document.querySelector("#rem-list");
-      showParaTag(cont);
+      if (isMobile) {
+        alert(`Time to do your task: "${msg}"`);
+        // Move the task back to the todo list and remove the cloned div
+        list.append(parentDiv);
+        parentDiv.style.display = "flex";
+        parentDivCopy.remove();
+
+        // Show or hide paragraph tag based on the content of the reminder list
+        let cont = document.querySelector("#rem-list");
+        showParaTag(cont);
+      }
+      else{
+        // Show a notification for the reminder
+        showNotification(`Time to do your task: "${msg}"`);
+        // alert(`Task Reminder: ${msg} `);
+
+        // Move the task back to the todo list and remove the cloned div
+        list.append(parentDiv);
+        parentDiv.style.display = "flex";
+        parentDivCopy.remove();
+
+        // Show or hide paragraph tag based on the content of the reminder list
+        let cont = document.querySelector("#rem-list");
+        showParaTag(cont);
+      }
     }, timeDiff);
 
     // Get the reminder list and remove the bell icon from the cloned div
