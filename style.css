@@ -157,7 +157,7 @@ body {
 .ul-container {
   display: flex;
   align-items: flex-start;
-  text-align: center;
+  /* text-align: center; */
   height: 80%;
   width: 100%;
   justify-content: space-around;
